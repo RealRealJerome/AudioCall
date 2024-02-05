@@ -9,13 +9,14 @@ import (
 import "fmt"
 
 // 向手机发送验证码
+
 func SendMsg(tel string, code string) string {
 	client, err := dysmsapi.NewClientWithAccessKey("cn-hangzhou", "LTAI5tFxuV1CcxCYmfVRdkFK", "zz6ZmXkzAyLScLdIpPIqnu1N9HCSxY")
 	request := dysmsapi.CreateSendSmsRequest()
 	request.Scheme = "https"
 	request.PhoneNumbers = tel             //手机号变量值
-	request.SignName = "ZXJNB"             //签名
-	request.TemplateCode = "SMS_19586XXXX" //模板编码
+	request.SignName = "JeromeBlog"        //签名
+	request.TemplateCode = "SMS_292455087" //模板编码
 	request.TemplateParam = "{\"code\":\"" + code + "\"}"
 	response, err := client.SendSms(request)
 	fmt.Println(response.Code)
