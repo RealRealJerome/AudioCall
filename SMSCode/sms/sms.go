@@ -1,17 +1,36 @@
 package sms
 
 import (
+	"encoding/json"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/dysmsapi"
+	"log"
 	"math/rand"
+	"os"
 	"strconv"
 	"time"
 )
 import "fmt"
 
 // 向手机发送验证码
+type SMSInfo struct {
+	AccessKey       string `json:"accessKey"`
+	AccessSecretKey string `json:"accessSecretKey"`
+}
 
+var smsInfo map[string]SMSInfo
+
+func init() {
+	yamlFile, e := os.ReadFile("config/config.json")
+	if e != nil {
+		log.Fatal(e)
+	}
+	e = json.Unmarshal(yamlFile, &smsInfo)
+	if e != nil {
+		log.Fatal(e)
+	}
+}
 func SendMsg(tel string, code string) string {
-	client, err := dysmsapi.NewClientWithAccessKey("cn-hangzhou", "LTAI5tFxuV1CcxCYmfVRdkFK", "zz6ZmXkzAyLScLdIpPIqnu1N9HCSxY")
+	client, err := dysmsapi.NewClientWithAccessKey("cn-hangzhou", smsInfo["sms"].AccessKey, smsInfo["sms"].AccessSecretKey)
 	request := dysmsapi.CreateSendSmsRequest()
 	request.Scheme = "https"
 	request.PhoneNumbers = tel             //手机号变量值
