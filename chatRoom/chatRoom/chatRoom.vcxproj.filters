@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\main">
+      <UniqueIdentifier>{7300a6ec-da33-4571-b459-4e949ff39bca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\chat_room">
+      <UniqueIdentifier>{297eef45-8f79-4c9e-9cce-3feb1c3f970d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\constant">
+      <UniqueIdentifier>{4ff8e962-8a87-4f15-99a8-9855691479e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\global">
+      <UniqueIdentifier>{e3739c51-9738-431d-b4d3-42bbc51b9f25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\user">
+      <UniqueIdentifier>{a81547da-2995-4cb5-92eb-13adbdb4dc17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\chat_room">
+      <UniqueIdentifier>{889162e4-1217-4843-b234-f3bda1cb0d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\user">
+      <UniqueIdentifier>{f35b975f-a251-400b-9877-ec99113ca21d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\sms_code">
+      <UniqueIdentifier>{7e7a7a7c-4f64-4f05-9414-26b8c8783a49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\sms_code">
+      <UniqueIdentifier>{4f97f12e-10f1-471a-bd52-876298c17e0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chat_room.h">
+      <Filter>头文件\chat_room</Filter>
+    </ClInclude>
+    <ClInclude Include="constant.h">
+      <Filter>头文件\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="user.h">
+      <Filter>头文件\user</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>头文件\global</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sms_code.h">
+      <Filter>头文件\sms_code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="chat_room.cpp">
+      <Filter>源文件\chat_room</Filter>
+    </ClCompile>
+    <ClCompile Include="user.cpp">
+      <Filter>源文件\user</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件\main</Filter>
+    </ClCompile>
+    <ClCompile Include="sms_code.cpp">
+      <Filter>源文件\sms_code</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
