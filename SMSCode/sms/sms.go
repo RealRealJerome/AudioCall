@@ -34,7 +34,7 @@ func SendMsg(tel string, code string) string {
 	request := dysmsapi.CreateSendSmsRequest()
 	request.Scheme = "https"
 	request.PhoneNumbers = tel             //手机号变量值
-	request.SignName = "JeromeBlog"        //签名
+	request.SignName = "吸加加知识点"            //签名
 	request.TemplateCode = "SMS_292455087" //模板编码
 	request.TemplateParam = "{\"code\":\"" + code + "\"}"
 	response, err := client.SendSms(request)
