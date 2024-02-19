@@ -40,7 +40,7 @@ func main() {
 	// 监听接口
 	http.HandleFunc("/sms", SmsCodeRpc) // 设置访问的路由
 	fmt.Println("started successfully")
-	if err := http.ListenAndServe(":6666", nil); err != nil {
+	if err := http.ListenAndServe(":8888", nil); err != nil {
 		log.Fatal(err)
 	}
 }
